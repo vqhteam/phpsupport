@@ -1,0 +1,24 @@
+{
+    "name": "vqhteam/support",
+    "description": "VQH Team Support",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vqhteam\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VQH Team",
+            "email": "vqh.programming@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "ext-openssl": "*",
+      "ext-curl": "*",
+      "ext-json": "*",
+      "ext-simplexml": "*"
+    }
+}
