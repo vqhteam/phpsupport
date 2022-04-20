@@ -3,7 +3,7 @@ namespace Vqhteam\Support\Social;
 use Vqhteam\Support\CURL\POST;
 use Vqhteam\Support\CURL\GET;
 class facebook {
-    public static function getID(string $url) : string{
+    public static function getID(string $url) : ?string{
         $url = urldecode($url);
         if (preg_match('/^(\d+)$/',$url)){
             return $url;
@@ -58,7 +58,7 @@ class facebook {
         }
         return $post->getErrorMessage();
     }
-    private static function getIDVideo(string $url): string
+    private static function getIDVideo(string $url): ?string
     {
         $get = new GET($url,self::headersFacebook(),[CURLOPT_HEADER=>true]);
         if ($get->send()){

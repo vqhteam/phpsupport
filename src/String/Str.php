@@ -1,7 +1,7 @@
 <?php
 namespace Vqhteam\Support\String;
 class Str {
-    public static function random(int $length=30){
+    public static function random(int $length=30):?string{
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $charactersLength = strlen($characters);
             $randomString = '';
@@ -9,6 +9,24 @@ class Str {
                 $randomString .= $characters[rand(0, $charactersLength - 1)];
             }
             return $randomString;
+    }
+    public static function randomInt(int $length=30):?string{
+        $characters = '0123456789';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+    public static function randomSpecialCharacters(int $length=30):?string{
+        $characters = '\\|>./?,<\'";:{}[]_-+=()*&^%$#@!~`';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
     public static function emailValidation(string $email,string $option_email=null)
     {

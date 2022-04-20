@@ -16,7 +16,7 @@ class AESHelper {
          hex2bin($key), OPENSSL_RAW_DATA, $iv);
      return new aes(bin2hex($iv),bin2hex($salt),$encrypted_data,$password);
  }
- public static function decrypt(string $encrypted_data_string,string $password):string{
+ public static function decrypt(string $encrypted_data_string,string $password):?string{
         if (empty($encrypted_data_string) || empty($password)){
             throw new \Exception('Encrypted data and password cannot be empty');
         }

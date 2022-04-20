@@ -16,25 +16,25 @@ class ipinfo {
         $this->currencyCode = $currencyCode;
         $this->currencySymbol = $currencySymbol;
     }
-    public function getIP():string {
+    public function getIP():?string {
         return $this->ip;
     }
-    public function getCountryName():string {
+    public function getCountryName():?string {
         return $this->country_name;
     }
-    public function getCountryCode():string {
+    public function getCountryCode():?string {
         return $this->country_code;
     }
-    public function getTimeZone():string {
+    public function getTimeZone():?string {
         return $this->timezone;
     }
-    public function getCurrencyCode():string {
+    public function getCurrencyCode():?string {
         return $this->currencyCode;
     }
-    public function getCurrencySymbol():string {
+    public function getCurrencySymbol():?string {
         return $this->currencySymbol;
     }
-    public function get() : object {
+    public function get() : ?object {
         return (object)['ip'=>$this->ip,'country_name'=>$this->country_name,
             'country_code'=>$this->country_code,'timezone'=>$this->timezone,
             'currencyCode'=>$this->currencyCode,'currencySymbol'=>$this->currencySymbol];

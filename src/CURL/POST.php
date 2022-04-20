@@ -21,7 +21,7 @@ class POST {
             $this->header = $header;
             $this->CURL_OPT = $CURL_OPT;
     }
-    public function getURL() : string
+    public function getURL() : ?string
     {
         return $this->url;
     }
@@ -36,7 +36,7 @@ class POST {
         }
         $this->url = $url;
     }
-    public function getDATA() : string
+    public function getDATA() : ?string
     {
         return $this->data;
     }
@@ -63,11 +63,11 @@ class POST {
     {
         $this->CURL_OPT = $CURL_OPT;
     }
-    public function getErrorMessage(): string
+    public function getErrorMessage(): ?string
     {
         return $this->error_message;
     }
-    public function getResponseMessage(): string
+    public function getResponseMessage(): ?string
     {
         return $this->success_message;
     }
